@@ -17,13 +17,15 @@ public class HttpMessageUtil {
         }
 
     public static ResponseEntity<String> internalServerError(String message) {
-
         return new ResponseEntity<>(String.format("\"message\": \"%s\"", message), HttpStatus.INTERNAL_SERVER_ERROR);
     }
     public static ResponseEntity<String> internalServerError() {
 
         return new ResponseEntity<>(String.format("\"message\": \"%s\"", "Something went wrong"), HttpStatus.INTERNAL_SERVER_ERROR);
     }
+    public static ResponseEntity<String> unAuthorized(String message) {
+            return new ResponseEntity<>(String.format("\"message\": \"%s\"", message), HttpStatus.UNAUTHORIZED);
+        }
 
 
 

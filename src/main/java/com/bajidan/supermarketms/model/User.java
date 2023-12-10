@@ -1,23 +1,15 @@
 package com.bajidan.supermarketms.model;
 
-import com.bajidan.supermarketms.dto.UserLogin;
-import com.bajidan.supermarketms.dto.UserSignUp;
+
+import com.bajidan.supermarketms.dto.user.SignUp;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
-import org.springframework.http.HttpStatus;
-import org.springframework.validation.FieldError;
-import org.springframework.web.bind.MethodArgumentNotValidException;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
-import java.util.HashMap;
-import java.util.Map;
 
 @Entity
 @Table(name = "users")
@@ -45,7 +37,7 @@ public class User {
     private String role;
     private boolean status;
 
-    public User(UserSignUp signUp) {
+    public User(SignUp signUp) {
         this.name = signUp.name();
         this.contactNumber = signUp.contactNumber();
         this.email = signUp.email();
