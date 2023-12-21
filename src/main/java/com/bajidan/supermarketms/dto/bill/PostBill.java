@@ -15,6 +15,4 @@ public class PostBill {
     private String paymentMethod;
     private Integer total;
     private List<ProductDetailsDTO> productDetailsDTOList;
-    private boolean isGenerated;
-
 }
