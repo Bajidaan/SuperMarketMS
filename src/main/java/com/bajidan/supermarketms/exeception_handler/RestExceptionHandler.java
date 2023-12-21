@@ -40,13 +40,20 @@ public class RestExceptionHandler {
         return errorMap;
     }
 
-//    @ResponseStatus(HttpStatus.NOT_FOUND)
-//    @ExceptionHandler(UsernameNotFoundException.class)
-//    public Map<String, String> handleUserNotFound(UsernameNotFoundException e) {
-//        Map<String, String> errors = new HashMap<>();
-//
-//       errors.put("message:", e.getMessage());
-//
-//        return errors;
-//    }
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ExceptionHandler(ProductNotFoundException.class)
+    public Map<String, String> handleProductNotFound(ProductNotFoundException e) {
+        Map<String, String> errors = new HashMap<>();
+
+       errors.put("message:", e.getMessage());
+        return errors;
+    }
+
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ExceptionHandler(CategoryNotFoundException.class)
+    public Map<String, String> handleCategoryNotFound(CategoryNotFoundException e) {
+        Map<String, String> errors = new HashMap<>();
+        errors.put("message:", e.getMessage());
+        return errors;
+    }
 }

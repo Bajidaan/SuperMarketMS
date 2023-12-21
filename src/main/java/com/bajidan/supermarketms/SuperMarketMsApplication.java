@@ -12,14 +12,6 @@ public class SuperMarketMsApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SuperMarketMsApplication.class, args);
+
     }
-
-//   CommandLineRunner commandLineRunner(UserRepository userRepository) {
-//        return args -> {
-//            com.bajidan.supermarketms.model.User user
-//                    = userRepository.findAllByEmail("odufuwa@gmail.com");
-//
-//        };
-//   }
-
 }

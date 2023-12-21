@@ -2,7 +2,6 @@ package com.bajidan.supermarketms.controller;
 
 import com.bajidan.supermarketms.controllerInterface.UserControllerInterface;
 import com.bajidan.supermarketms.dto.user.*;
-import com.bajidan.supermarketms.repository.UserRepository;
 import com.bajidan.supermarketms.serviceImp.UserService;
 import com.bajidan.supermarketms.wrapper.UserWrapper;
 import jakarta.validation.Valid;
